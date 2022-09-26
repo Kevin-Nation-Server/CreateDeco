@@ -9,11 +9,11 @@ import com.github.talrey.createdeco.items.CoinStackItem;
 import com.jozufozu.flywheel.util.NonNullSupplier;
 import com.mojang.math.Vector3f;
 import com.simibubi.create.AllItems;
-import com.simibubi.create.repack.registrate.Registrate;
-import com.simibubi.create.repack.registrate.builders.BlockBuilder;
-import com.simibubi.create.repack.registrate.builders.ItemBuilder;
-import com.simibubi.create.repack.registrate.util.entry.BlockEntry;
-import com.simibubi.create.repack.registrate.util.entry.ItemEntry;
+import com.tterrag.registrate.Registrate;
+import com.tterrag.registrate.builders.BlockBuilder;
+import com.tterrag.registrate.builders.ItemBuilder;
+import com.tterrag.registrate.util.entry.BlockEntry;
+import com.tterrag.registrate.util.entry.ItemEntry;
 import net.minecraft.advancements.critereon.InventoryChangeTrigger;
 import net.minecraft.advancements.critereon.ItemPredicate;
 import net.minecraft.advancements.critereon.StatePropertiesPredicate;
@@ -240,7 +240,7 @@ public class Props {
               .pattern("t")
               .pattern("p")
               .define('n', nugget)
-              .define('t', Items.TORCH)
+              .define('t', Items.REDSTONE_TORCH)
               .define('p', plate)
               .unlockedBy("has_item", InventoryChangeTrigger.TriggerInstance.hasItems(ItemPredicate.Builder.item().of(plate).build()))
               .save(prov);
@@ -265,7 +265,7 @@ public class Props {
               .pattern("t")
               .pattern("p")
               .define('n', nugget)
-              .define('t', Items.TORCH)
+              .define('t', Items.GLOW_BERRIES)
               .define('p', plate)
               .unlockedBy("has_item", InventoryChangeTrigger.TriggerInstance.hasItems(ItemPredicate.Builder.item().of(plate).build()))
               .save(prov);
@@ -290,7 +290,7 @@ public class Props {
               .pattern("t")
               .pattern("p")
               .define('n', nugget)
-              .define('t', Items.TORCH)
+              .define('t', Items.SOUL_TORCH)
               .define('p', plate)
               .unlockedBy("has_item", InventoryChangeTrigger.TriggerInstance.hasItems(ItemPredicate.Builder.item().of(plate).build()))
               .save(prov);
